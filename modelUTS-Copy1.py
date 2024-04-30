@@ -15,7 +15,7 @@ def make_dataframe(data_arr, columns):
     for i, val in enumerate(data_arr) :
         dictionary[columns[i]] = val
 
-    df = pd.DataFrame(dictionary, index[0])
+    df = pd.DataFrame(dictionary, index=[0])
     return df
 
 
