@@ -112,9 +112,7 @@ def main():
     st.text("")
     st.text("")
     if st.button('Create Prediction'):
-        features = [credit_score,geography,gender,age,tenure,
-                   balance,product,crcard,active,salary]
-        result = make_prediction(features)
+        result = make_prediction(df)
         st.success(f'The prediction is: {result}')
         if result == 1:
             st.subheader(':red[**Churn Customer**]')
@@ -123,10 +121,9 @@ def main():
             st.subheader(':green[**Loyal Customer**]')
             #st.image('Documents/4th Semester/Model Deployment/loyalCustomer.png')
 
-def make_prediction(features):
-    input_array = np.array(features).reshape(1, -1)
-    prediction = model.predict(input_array)
-    return prediction[0]
+def make_prediction(data):
+    prediction = model.predict(data)
+    return prediction
 
 if __name__ == '__main__':
     main()
