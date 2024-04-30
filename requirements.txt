@@ -1,5 +1,5 @@
-streamlit==1.2.0
-joblib
-numpy==1.24.3
-pandas==2.1.4
-scikit-learn
+joblib @ file:///tmp/build/80754af9/joblib_1635411271373/work
+numpy @ file:///opt/concourse/worker/volumes/live/a3493aeb-202b-43d0-6a51-0a73ce7c0029/volume/numpy_and_numpy_base_1649782777974/work
+pandas==1.4.2
+scikit-learn @ file:///opt/concourse/worker/volumes/live/cffa5efe-beec-4a37-5774-350794e43990/volume/scikit-learn_1642617139916/work
+streamlit==1.32.2
