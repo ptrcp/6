@@ -2,11 +2,11 @@ import streamlit as st
 import joblib
 import numpy as np
 
-model = joblib.load('/Users/patriciapepita/Documents/4th Semester/Model Deployment/OOPmodel2.pkl')
+model = joblib.load('OOPmodel2.pkl')
 
 def main():
     st.title(':red[Customer Churn Prediction]')
-    st.image('/Users/patriciapepita/Documents/4th Semester/Model Deployment/Customer-churn-header.png')
+    #st.image('/Users/patriciapepita/Documents/4th Semester/Model Deployment/Customer-churn-header.png')
     
     # INPUT 1
     st.text("")
@@ -98,14 +98,12 @@ def main():
         st.success(f'The prediction is: {result}')
         if result == 1:
             st.subheader(':red[**Churn Customer**]')
-            st.image('Documents/4th Semester/Model Deployment/churnCustomer.png')
+            #st.image('Documents/4th Semester/Model Deployment/churnCustomer.png')
         else:
             st.subheader(':green[**Loyal Customer**]')
-            st.image('Documents/4th Semester/Model Deployment/loyalCustomer.png')
+            #st.image('Documents/4th Semester/Model Deployment/loyalCustomer.png')
 
 def make_prediction(features):
-    # Use the loaded model to make predictions
-    # Replace this with the actual code for your model
     input_array = np.array(features).reshape(1, -1)
     prediction = model.predict(input_array)
     return prediction[0]
