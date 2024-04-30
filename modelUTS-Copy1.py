@@ -2,7 +2,7 @@ import streamlit as st
 import joblib
 import numpy as np
 
-model = joblib.load('OOPmodel4.pkl')
+model = joblib.load('OOPmodel3.pkl')
 
 def main():
     #st.title(':red[Customer Churn Prediction]')
