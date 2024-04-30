@@ -8,8 +8,8 @@ model = pickle.load(pickle_in)
 
 def make_dataframe(data_arr, columns):
     dictionary = {
-        'CreditScore': 0.0, 'Geography': 0.0, 'Gender': 0.0, 'Age': 0.0, 'Tenure': 0.0, 'Balance': 0.0,
-       'NumOfProducts': 0.0, 'HasCrCard': 0.0, 'IsActiveMember': 0.0, 'EstimatedSalary': 0.0
+        'CreditScore': 0.0, 'Geography': 0, 'Gender': 0, 'Age': 0.0, 'Tenure': 0, 'Balance': 0.0,
+       'NumOfProducts': 0, 'HasCrCard': 0, 'IsActiveMember': 0, 'EstimatedSalary': 0.0
     }
     
     for i, val in enumerate(data_arr) :
