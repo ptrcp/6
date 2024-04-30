@@ -5,6 +5,19 @@ import numpy as np
 pickle_in = open("OOPmodel4.pkl", 'rb')
 model = pickle.load(pickle_in)
 
+def make_dataframe(data_arr, columns):
+    dictionary = {
+        'CreditScore': 0.0, 'Geography': 0.0, 'Gender': 0.0, 'Age': 0.0, 'Tenure': 0.0, 'Balance': 0.0,
+       'NumOfProducts': 0.0, 'HasCrCard': 0.0, 'IsActiveMember': 0.0, 'EstimatedSalary': 0.0
+    }
+    
+    for i, val in enumerate(data_arr) :
+        dictionary[columns[i]] = val
+
+    df = pd.DataFrame(dictionary)
+    return df
+
+
 def main():
     #st.title(':red[Customer Churn Prediction]')
     st.title('Customer Churn Prediction')
@@ -90,6 +103,12 @@ def main():
     salary = st.number_input('Input the estimation below', min_value=0.00,
                              max_value=None, value=0.00)
     st.write('*Answer:*', salary)
+
+    df = make_dataframe([credit_score,geography,gender,age,tenure,
+                   balance,product,crcard,active,salary], ['CreditScore', 'Geography', 'Gender', 'Age', 'Tenure', 'Balance',
+                                                             'NumOfProducts', 'HasCrCard', 'IsActiveMember', 'EstimatedSalary'])
+    
+    st.dataframe(df)
     
     st.text("")
     st.text("")
