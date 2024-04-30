@@ -105,9 +105,7 @@ def main():
                              max_value=None, value=0.00)
     st.write('*Answer:*', salary)
 
-    df = make_dataframe([credit_score,geography,gender,age,tenure,
-                   balance,product,crcard,active,salary], ['CreditScore', 'Geography', 'Gender', 'Age', 'Tenure', 'Balance',
-                                                             'NumOfProducts', 'HasCrCard', 'IsActiveMember', 'EstimatedSalary'])
+    df = make_dataframe([credit_score,geography,gender,age,tenure, balance,product,crcard,active,salary], ['CreditScore', 'Geography', 'Gender', 'Age', 'Tenure', 'Balance','NumOfProducts', 'HasCrCard', 'IsActiveMember', 'EstimatedSalary'])
     
     st.dataframe(df)
     
