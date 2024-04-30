@@ -18,6 +18,9 @@ def make_dataframe(data_arr, columns):
     df = pd.DataFrame(dictionary, index=[0])
     return df
 
+def make_prediction(data):
+    prediction = model.predict(data)
+    return prediction
 
 def main():
     #st.title(':red[Customer Churn Prediction]')
@@ -120,10 +123,6 @@ def main():
         else:
             st.subheader(':green[**Loyal Customer**]')
             #st.image('Documents/4th Semester/Model Deployment/loyalCustomer.png')
-
-def make_prediction(data):
-    prediction = model.predict(data)
-    return prediction
 
 if __name__ == '__main__':
     main()
