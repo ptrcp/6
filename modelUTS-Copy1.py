@@ -115,7 +115,7 @@ def main():
     st.text("")
     st.text("")
     if st.button('Create Prediction'):
-        result = make_prediction(df.values)
+        result = make_prediction(df)
         st.success(f'The prediction is: {result}')
         if result == 1:
             st.subheader(':red[**Churn Customer**]')
